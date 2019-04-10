@@ -1,0 +1,28 @@
+{
+  "name": "ChangellyAPI",
+  "version": "0.1.0",
+  "summary": "A short description of ChangellyAPI.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/coinpaprika/changelly-api-swift-client",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Dominique Stranz": "dstranz@greywizard.com"
+  },
+  "source": {
+    "git": "https://github.com/Dominique Stranz/ChangellyAPI.git",
+    "tag": "0.1.0"
+  },
+  "social_media_url": "https://twitter.com/coinpaprika",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "ChangellyAPI/Classes/**/*",
+  "dependencies": {
+    "CoinpaprikaAPI/Networking": [
+
+    ]
+  }
+}
