@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import CoinpaprikaAPI
 
-public struct TransactionLog: Codable, CodableModel {
+public struct TransactionLog: Codable {
     public let id: String
     public let createdAt: Date
     public let moneyReceived: Decimal
@@ -30,8 +29,4 @@ public struct TransactionLog: Codable, CodableModel {
     public let networkFee: String?
     public let changellyFee: String
     public let apiExtraFee: String
-    
-    static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? {
-        return .secondsSince1970
-    }
 }

@@ -73,13 +73,23 @@ struct JsonRpcResponseEvelope<Model: Codable>: Codable, CodableModel {
     let id: Int
     let result: Model?
     let error: JsonRpcErrorEnvelope?
+
+    static var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return formatter
+    }
     
     static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? {
-        if codableModel = model as? CodableModel {
-            return Model.dateDecodingStrategy
-        }
-        
-        return nil
+        return .custom({ (decoder) -> Date in
+            let container = try decoder.singleValueContainer()
+            if let raw = try? container.decode(String.self) {
+                return dateFormatter.date(from: raw)!
+            } else {
+                let raw = try! container.decode(Int.self)
+                return Date(timeIntervalSince1970: TimeInterval(raw))
+            }
+        })
     }
 }
 

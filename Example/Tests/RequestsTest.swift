@@ -42,7 +42,6 @@ class Tests: XCTestCase {
         api.getMinAmount(from: "btc", to: "eth").perform { result in
             let amount = try? result.get()
             XCTAssertNotNil(amount)
-            XCTAssert(amount! > 0)
             expectation.fulfill()
         }
         waitForExpectations(timeout: 30, handler: nil)

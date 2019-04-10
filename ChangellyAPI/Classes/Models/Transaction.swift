@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import CoinpaprikaAPI
 
-public struct Transaction: Codable, CodableModel {
+public struct Transaction: Codable {
     public let id: String
     public let apiExtraFee: String
     public let changellyFee: String
@@ -59,16 +58,6 @@ public struct Transaction: Codable, CodableModel {
             case .hold:
                 return "Due to AML/KYC procedure, exchange may be delayed"
             }
-        }
-        
-        static var dateFormatter: DateFormatter {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-            return formatter
-        }
-        
-        static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? {
-            return .formatted(dateFormatter)
         }
     }
 }

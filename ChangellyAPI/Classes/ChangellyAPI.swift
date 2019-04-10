@@ -23,8 +23,8 @@ public struct ChangellyAPI {
         return JsonRpcRequest<[Currency]>(baseUrl: baseUrl, method: "getCurrenciesFull", params: [:], credentials: credentials)
     }
     
-    public func getMinAmount(from: String, to: String) -> JsonRpcRequest<Decimal> {
-        return JsonRpcRequest<Decimal>(baseUrl: baseUrl, method: "getMinAmount", params: ["from": from, "to": to], credentials: credentials)
+    public func getMinAmount(from: String, to: String) -> JsonRpcRequest<String> {
+        return JsonRpcRequest<String>(baseUrl: baseUrl, method: "getMinAmount", params: ["from": from, "to": to], credentials: credentials)
     }
     
     public func getExchangeAmount(from: String, to: String, amount: Decimal) -> JsonRpcRequest<String> {
