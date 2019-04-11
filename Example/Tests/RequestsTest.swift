@@ -1,6 +1,14 @@
 import XCTest
 import ChangellyAPI
 
+/*
+Uncomment this code for test locally and fill up with your credentials
+struct TestCredentials {
+    static let key = "{YOUR_API_KEY}"
+    static let secret = "{YOUR_API_SECRET}"
+}
+*/
+
 class Tests: XCTestCase {
     
     var api: ChangellyAPI!

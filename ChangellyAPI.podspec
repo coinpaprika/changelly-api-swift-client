@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Dominique Stranz' => 'dstranz@greywizard.com' }
   s.source           = { :git => 'https://github.com/coinpaprika/changelly-api-swift-client.git', :tag => s.version.to_s }
-  s.source           = { :git => 'https://github.com/Dominique Stranz/ChangellyAPI.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/coinpaprika'
 
   s.ios.deployment_target = '10.0'
