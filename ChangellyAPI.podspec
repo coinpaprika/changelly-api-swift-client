@@ -8,17 +8,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ChangellyAPI'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ChangellyAPI.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '1.0'
+  s.summary          = 'Changelly - crypto to crypto exchange service - API client'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+* Supports all endpoints from API
+* Returns response objects transparently decoded via Codable
+* Based on Swift 5 Result enum
+* Handle Changelly requests signing
                        DESC
 
   s.homepage         = 'https://github.com/coinpaprika/changelly-api-swift-client'
@@ -29,14 +26,14 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://twitter.com/coinpaprika'
 
   s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.12'
+  s.watchos.deployment_target = '3.0'
+  s.tvos.deployment_target = '10.0'
+  
+  s.swift_versions = ['4.2', '5.0']
+  s.cocoapods_version = '> 1.6.1'
 
   s.source_files = 'ChangellyAPI/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ChangellyAPI' => ['ChangellyAPI/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'CoinpaprikaAPI/Networking'
 end
