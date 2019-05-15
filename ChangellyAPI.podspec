@@ -8,7 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ChangellyAPI'
-  s.version          = '1.0'
+  s.module_name      = 'Changelly'
+  s.version          = '1.1'
   s.summary          = 'Changelly - crypto to crypto exchange service - API client'
 
   s.description      = <<-DESC

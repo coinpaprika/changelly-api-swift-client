@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoinpaprikaAPI
+import Coinpaprika
 
 public struct JsonRpcRequest<Model: Codable> {
     
@@ -69,7 +69,7 @@ extension JsonRpcError: LocalizedError {
     }
 }
 
-struct JsonRpcResponseEvelope<Model: Codable>: Codable, CodableModel {
+public struct JsonRpcResponseEvelope<Model: Codable>: CodableModel {
     let id: Int
     let result: Model?
     let error: JsonRpcErrorEnvelope?
@@ -80,7 +80,7 @@ struct JsonRpcResponseEvelope<Model: Codable>: Codable, CodableModel {
         return formatter
     }
     
-    static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? {
+    public static var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? {
         return .custom({ (decoder) -> Date in
             let container = try decoder.singleValueContainer()
             if let raw = try? container.decode(String.self) {

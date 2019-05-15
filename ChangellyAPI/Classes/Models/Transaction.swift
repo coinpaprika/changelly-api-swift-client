@@ -20,6 +20,8 @@ public struct Transaction: Codable {
     public let currencyTo: String
     public let payinAddress: String
     public let payoutAddress: String
+    public let refundAddress: String?
+    public let refundExtraId: String?
     public let createdAt: Date
     public let kycRequired: Bool
     

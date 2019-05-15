@@ -1,4 +1,4 @@
-framework module ChangellyAPI {
+framework module Changelly {
   umbrella header "ChangellyAPI-umbrella.h"
 
   export *

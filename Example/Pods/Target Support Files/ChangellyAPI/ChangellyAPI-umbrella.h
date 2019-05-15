@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double ChangellyAPIVersionNumber;
-FOUNDATION_EXPORT const unsigned char ChangellyAPIVersionString[];
+FOUNDATION_EXPORT double ChangellyVersionNumber;
+FOUNDATION_EXPORT const unsigned char ChangellyVersionString[];
 

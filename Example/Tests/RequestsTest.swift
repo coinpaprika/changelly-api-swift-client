@@ -1,5 +1,5 @@
 import XCTest
-import ChangellyAPI
+import Changelly
 
 /*
 Uncomment this code for test locally and fill up with your credentials

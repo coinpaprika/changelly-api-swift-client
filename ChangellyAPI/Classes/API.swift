@@ -7,7 +7,9 @@
 
 import Foundation
 
-public struct ChangellyAPI {
+public typealias ChangellyAPI = API
+
+public struct API {
     private let credentials: Credentials
     private let baseUrl: URL = URL(string: "https://api.changelly.com")!
     

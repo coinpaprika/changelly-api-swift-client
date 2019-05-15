@@ -13,7 +13,9 @@
 ## Example
 
 ```swift
-let client = ChangellyAPI(key: "{YOUR_API_KEY}", secret: "{YOUR_API_SECRET}")
+import Changelly
+
+let client = Changelly.API(key: "{YOUR_API_KEY}", secret: "{YOUR_API_SECRET}")
 client.getCurrencies().perform  { result in
     do {
       let currencies = try? result.get()
