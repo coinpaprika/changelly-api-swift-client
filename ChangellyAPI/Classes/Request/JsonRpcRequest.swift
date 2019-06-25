@@ -7,7 +7,11 @@
 //
 
 import Foundation
+#if canImport(Networking)
+import Networking
+#else
 import Coinpaprika
+#endif
 
 public struct JsonRpcRequest<Model: Codable> {
     
