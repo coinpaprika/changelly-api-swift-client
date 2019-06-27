@@ -15,6 +15,11 @@ let package = Package(
             name: "Changelly",
             dependencies: ["Networking"],
             path: "ChangellyAPI/Classes"
-         )
+        ),
+        .testTarget(
+            name: "ChangellyTests",
+            dependencies: ["Changelly"],
+            path: "Example/Tests"
+        )
     ]
 )
