@@ -13,7 +13,7 @@ let package = Package(
     targets: [
         .target(
             name: "Changelly",
-            dependencies: ["Networking"],
+            dependencies: ["CoinpaprikaNetworking"],
             path: "ChangellyAPI/Classes"
         ),
         .testTarget(
